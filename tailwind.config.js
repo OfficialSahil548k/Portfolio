@@ -7,9 +7,11 @@ export default {
     theme: {
         extend: {
             colors: {
-                'bg-primary': '#0f172a', // Slate 900
-                'bg-secondary': '#1e293b', // Slate 800
-                'accent': '#10b981', // Emerald 500
+                'bg-primary': '#ffffff', // White
+                'bg-secondary': '#f4f4f5', // Zinc 100 - slightly darker for contrast
+                'accent': '#facc15', // Yellow 400
+                'text-primary': '#09090b', // Zinc 950
+                'text-secondary': '#52525b', // Zinc 600
             },
             fontFamily: {
                 sans: ['Inter', 'system-ui', 'sans-serif'],

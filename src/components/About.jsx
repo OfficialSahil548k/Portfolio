@@ -8,7 +8,7 @@ const About = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-5xl font-bold mb-12 text-center"
+          className="text-3xl md:text-5xl font-bold mb-12 text-center text-text-primary"
         >
           About Me
         </motion.h2>
@@ -18,7 +18,7 @@ const About = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="space-y-6 text-gray-300 text-lg"
+            className="space-y-6 text-text-secondary text-lg"
           >
             <p>
               I am a passionate developer with a keen eye for detail and a love
@@ -31,7 +31,9 @@ const About = () => {
               aesthetics and functionality.
             </p>
             <div className="pt-4">
-              <h3 className="text-xl font-bold text-white mb-4">Tech Stack</h3>
+              <h3 className="text-xl font-bold text-text-primary mb-4">
+                Tech Stack
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {[
                   "React",
@@ -43,7 +45,7 @@ const About = () => {
                 ].map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-bg-primary rounded-full text-sm text-gray-400 border border-gray-800"
+                    className="px-3 py-1 bg-white rounded-full text-sm text-text-secondary border border-gray-200 shadow-sm"
                   >
                     {tech}
                   </span>
@@ -58,7 +60,7 @@ const About = () => {
             transition={{ delay: 0.4 }}
             className="relative"
           >
-            <div className="rounded-2xl border border-white/10 p-8 flex items-center justify-center relative overflow-hidden group h-full">
+            <div className="rounded-2xl border border-gray-100 bg-white p-8 flex items-center justify-center relative overflow-hidden group h-full shadow-lg">
               <div
                 className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-500 group-hover:scale-110"
                 style={{
@@ -66,27 +68,27 @@ const About = () => {
                     'url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop")',
                 }}
               ></div>
-              <div className="absolute inset-0 bg-bg-primary/90 z-10"></div>
+              <div className="absolute inset-0 bg-white/70 z-10"></div>
 
               <div className="text-center relative z-20">
-                <h3 className="text-2xl font-bold text-white mb-2">
+                <h3 className="text-2xl font-bold text-text-primary mb-2">
                   Experience
                 </h3>
-                <p className="text-gray-400">1+ Years Building Web Apps</p>
+                <p className="text-text-secondary">
+                  1+ Years Building Web Apps
+                </p>
 
                 <div className="mt-8 grid grid-cols-2 gap-4">
-                  <div className="p-4 bg-bg-secondary/80 backdrop-blur-sm rounded-xl border border-white/5">
-                    <div className="text-3xl font-bold gradient-text mb-1">
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                    <div className="text-3xl font-bold text-black mb-1">
                       10+
                     </div>
                     <div className="text-sm text-gray-500">
                       Projects Completed
                     </div>
                   </div>
-                  <div className="p-4 bg-bg-secondary/80 backdrop-blur-sm rounded-xl border border-white/5">
-                    <div className="text-3xl font-bold gradient-text mb-1">
-                      5+
-                    </div>
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                    <div className="text-3xl font-bold text-black mb-1">5+</div>
                     <div className="text-sm text-gray-500">Happy Clients</div>
                   </div>
                 </div>

@@ -24,12 +24,12 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-bg-primary/80 backdrop-blur-md py-4"
+          ? "bg-white/80 backdrop-blur-md py-4 shadow-sm"
           : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold gradient-text">
+        <a href="#" className="text-2xl font-bold text-black">
           Portfolio.
         </a>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-400 hover:text-white transition-colors font-medium"
+              className="text-text-secondary hover:text-black transition-colors font-medium"
             >
               {link.name}
             </a>
@@ -48,7 +48,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-2xl text-white"
+          className="md:hidden text-2xl text-black"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <FiX /> : <FiMenu />}
@@ -61,13 +61,13 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 w-full bg-bg-secondary p-4 flex flex-col gap-4 shadow-xl border-t border-white/10 md:hidden"
+              className="absolute top-full left-0 w-full bg-white p-4 flex flex-col gap-4 shadow-xl border-t border-gray-100 md:hidden"
             >
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-white py-2"
+                  className="text-text-secondary hover:text-black py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

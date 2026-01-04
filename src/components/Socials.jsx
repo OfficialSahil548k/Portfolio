@@ -25,14 +25,14 @@ const Socials = () => {
       name: "GitHub",
       icon: <FaGithub />,
       href: "https://github.com/OfficialSahil548k",
-      color: "hover:text-white",
+      color: "hover:text-black",
     },
   ];
 
   return (
-    <section className="py-20 bg-bg-secondary">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-12">
+        <h2 className="text-3xl md:text-5xl font-bold mb-12 text-text-primary">
           Connect With Me
         </h2>
 
@@ -43,7 +43,7 @@ const Socials = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-5xl text-gray-500 transition-all duration-300 ${social.color}`}
+              className={`text-5xl text-gray-400 transition-all duration-300 ${social.color}`}
               whileHover={{ scale: 1.1 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
