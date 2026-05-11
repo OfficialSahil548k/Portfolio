@@ -61,7 +61,7 @@ const Socials = () => {
           viewport={{ once: true }}
         >
           <a
-            href="https://drive.google.com/file/d/16v04CZOTWXBFarGZap-MBgZQ8VpdEg5j/view"
+            href="https://drive.google.com/file/d/1e47ASFcD27BWSDGA3Vtd2S3nOYrkOIqY/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
