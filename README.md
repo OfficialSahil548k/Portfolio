@@ -1,18 +1,45 @@
-# Sahil Sharma 
-- Full Stack Web Developer
-- Strong hands on Python
-- currently working on DSA.
-- An slight experienced Data Analyst.
-- Will work on Machine Learning in future.
----
-Checkout my Portfolio :
+# Sahil Sharma
+
+Personal portfolio website for Sahil Sharma, a full-stack web developer with strong hands-on Python skills, backend development experience, and a growing focus on DSA, data analytics, and machine learning.
+
+## Live Portfolio
 
 https://sahil-sharma.onrender.com
 
----
-Technologies used :
+## About Me
+
+- Full-stack web developer
+- Strong hands-on experience with Python
+- Currently working on Data Structures and Algorithms
+- Experienced in data analytics and insight-driven development
+- Interested in building machine learning skills and AI-powered products
+
+## Featured Projects
+
+- **Invoice Ai** - AI-powered invoice generation and automation platform with a modern UI and modular content system.
+- **MindMania** - Online quiz conducting platform for students and educational institutes.
+- **InterviewIQ** - AI-driven live interview platform with resume analysis and interview scoring.
+
+## Tech Stack
+
 - React
-- Tailwind CSS
 - Vite
+- Tailwind CSS
 - Framer Motion
-- Cloudinary
+- React Icons
+- JavaScript
+- Python
+- Node.js
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
