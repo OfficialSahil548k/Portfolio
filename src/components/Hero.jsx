@@ -1,67 +1,71 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
+import image1 from "../assets/profilePictures/image1.png";
+import image2 from "../assets/profilePictures/image2.png";
+import image3 from "../assets/profilePictures/image3.png";
+import image4 from "../assets/profilePictures/image4.png";
+import image5 from "../assets/profilePictures/image5.png";
+import image6 from "../assets/profilePictures/image6.png";
+
+const profileImages = [image1, image2, image3, image4, image5, image6];
 
 const Hero = () => {
-  return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
-    >
-      {/* Top Yellow Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-accent/30 blur-[120px] rounded-full -z-10 pointer-events-none" />
+  const [activeImage, setActiveImage] = useState(0);
 
-      <div className="container mx-auto px-4 relative z-10 text-center">
-        {/* Profile Image */}
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveImage((prev) => (prev + 1) % profileImages.length);
+    }, 2000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+  return (
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden px-4 pt-24 pb-16">
+      <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-violet-500/20 blur-[140px]" />
+      <div className="absolute bottom-10 right-0 h-[280px] w-[280px] rounded-full bg-cyan-500/20 blur-[120px]" />
+
+      <div className="container mx-auto grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8 relative inline-block"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl"
         >
-          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-xl relative z-10">
-            <img
-              src="https://res.cloudinary.com/dr9u8avmt/image/upload/v1767524493/Professional_image_vo5a3u.png"
-              alt="Profile"
-              className="w-full h-full object-cover"
-            />
+          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-cyan-300">
+            Full-Stack Developer 
+          </p>
+          <h1 className="text-5xl font-semibold leading-tight text-white md:text-7xl">
+            I build scalable products with strong backend logic and data-driven thinking.
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400 md:text-xl">
+            I enjoy creating end-to-end digital solutions, from robust APIs and systems architecture to analytics-focused experiences that turn data into decisions.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#socials" className="btn-primary">
+              Let&apos;s talk <FaArrowRight />
+            </a>
           </div>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-lg md:text-xl text-text-secondary mb-4"
-        >
-          Hello, I'm
-        </motion.p>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="text-5xl md:text-7xl font-bold mb-6 text-text-primary"
-        >
-          Sahil Sharma
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed"
-        >
-          A Creative Developer building premium web experiences.
-        </motion.p>
-
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0, x: 24 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="glass-panel gradient-border p-5"
         >
-          <a href="#contact" className="btn-primary">
-            Get in Touch
-          </a>
+          <div className="overflow-hidden rounded-[24px] border border-white/10 bg-black/20">
+            <motion.img
+              key={profileImages[activeImage]}
+              src={profileImages[activeImage]}
+              alt="Sahil Sharma"
+              initial={{ opacity: 0, scale: 1.02 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="h-[420px] w-full object-cover"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
