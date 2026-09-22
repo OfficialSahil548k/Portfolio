@@ -25,9 +25,9 @@ const projects = [
   {
     title: "InterviewIQ",
     description:
-      "An Ai-driven Live Interview Conducting platform with Resume Analysis feature that scores your Interview session.(....currently under progress).",
+      "An Ai-driven Live Interview Conducting platform with Resume Analysis feature that scores your Interview session.",
     stack: ["React", "Vite", "API", "OpenRouter", "Node"],
-    link: "https://interview-i-q.netlify.app/",
+    link: "https://interviewiq-zmra.onrender.com/",
     image: interviewIQImage,
   },
 ];
