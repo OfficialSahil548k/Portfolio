@@ -75,7 +75,7 @@ const Hero = () => {
         </motion.div>
           <div>
             <a
-              href="https://drive.google.com/file/d/1YQn1lpmtZW1HPM1_e3TdNwoL3KPU0DGs/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1NHuPaNocjuofRtrW1sSHulyB-564ca9m/view"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
